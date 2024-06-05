@@ -247,14 +247,14 @@ USERINFOService implements USERINFOImplService<USERINFO> {
                                     group.setName(row.getCell(5).getStringCellValue());
                                     group.setLevel((int) row.getCell(6).getNumericCellValue());
 
-                                    if (group.getName().charAt(group.getName().length() - 1) == 'U')
+                                    if (group.getName().charAt(group.getName().length() - 2) == 'U')
                                         group.setEducationLanguage(eduLanRepo.findEducationLanguageByName("UZBEK").get());
-                                    if (group.getName().charAt(group.getName().length() - 1) == 'R')
+                                    if (group.getName().charAt(group.getName().length() - 2) == 'R')
                                         group.setEducationLanguage(eduLanRepo.findEducationLanguageByName("RUSSIAN").get());
-                                    if (group.getName().charAt(group.getName().length() - 1) == 'E')
+                                    if (group.getName().charAt(group.getName().length() - 2) == 'E')
                                         group.setEducationLanguage(eduLanRepo.findEducationLanguageByName("ENGLISH").get());
 
-                                    if (group.getName().indexOf('-') == 3) {
+                                    if (group.getName().indexOf('_') == 3) {
                                         group.setEducationType(eduTypeRepo.findEducationTypeByName("KUNDUZGI").get());
                                     } else {
                                         if (group.getName().charAt(3) == 'P')
@@ -351,14 +351,14 @@ USERINFOService implements USERINFOImplService<USERINFO> {
                                     group.setName(row.getCell(5).getStringCellValue());
                                     group.setLevel((int) row.getCell(6).getNumericCellValue());
 
-                                    if (group.getName().charAt(group.getName().length() - 1) == 'U')
+                                    if (group.getName().charAt(group.getName().length() - 2) == 'U')
                                         group.setEducationLanguage(eduLanRepo.findEducationLanguageByName("UZBEK").get());
-                                    if (group.getName().charAt(group.getName().length() - 1) == 'R')
+                                    if (group.getName().charAt(group.getName().length() - 2) == 'R')
                                         group.setEducationLanguage(eduLanRepo.findEducationLanguageByName("RUSSIAN").get());
-                                    if (group.getName().charAt(group.getName().length() - 1) == 'E')
+                                    if (group.getName().charAt(group.getName().length() - 2) == 'E')
                                         group.setEducationLanguage(eduLanRepo.findEducationLanguageByName("ENGLISH").get());
 
-                                    if (group.getName().indexOf('-') == 3) {
+                                    if (group.getName().indexOf('_') == 3) {
                                         group.setEducationType(eduTypeRepo.findEducationTypeByName("KUNDUZGI").get());
                                     } else {
                                         if (group.getName().charAt(3) == 'P')
