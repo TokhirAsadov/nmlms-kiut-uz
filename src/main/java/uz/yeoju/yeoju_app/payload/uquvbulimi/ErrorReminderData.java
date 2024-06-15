@@ -1,4 +1,4 @@
-package uz.yeoju.yeoju_app.entity.uquvbulim;
+package uz.yeoju.yeoju_app.payload.uquvbulimi;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
